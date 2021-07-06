@@ -378,6 +378,7 @@ class GeomCA():
         fn_vr_end = timer()
         self.log('RE_graph_time_elapsed', timedelta(seconds=fn_vr_end - fn_start), sub=True)
         vrs = st.get_skeleton(1) 
+        vrs = list(vrs)
         edgelist = [vrs[i][0] + [vrs[i][1]] for i in range(len(vrs)) if len(vrs[i][0]) > 1]
         self.log('total_time_elapsed', timedelta(seconds=timer() - fn_start), sub=True)
         self.log('skeleton_length', len(vrs), sub=True)
