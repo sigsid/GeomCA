@@ -25,7 +25,7 @@ parser.add_argument('--load_GeomCA' , type=int, default=0,
 args_opt = parser.parse_args()
 
 # Load the config file
-config_file = os.path.join('configs', args_opt.config_name)
+config_file = os.path.join('GeomCA_fork/configs', args_opt.config_name)
 config = SourceFileLoader(args_opt.config_name, config_file).load_module().config 
 path_to_dataset = config['data']['path_to_dataset']
 experiment_path = config['GeomCA']['experiment_path']
